@@ -15,7 +15,7 @@ def get_standings(season):
 
     headers = {
     'x-rapidapi-host': "v1.basketball.api-sports.io",
-    'x-rapidapi-key': os.getenv(key)
+    'x-rapidapi-key': key
     }
 
     connection.request("GET", f"/standings?league=12&season={season}", headers=headers)
