@@ -7,13 +7,15 @@ from dotenv import load_dotenv
 
 # Load variables from .env file
 load_dotenv()
+key = "64c004a78ca539de6c7cde0858ec2010"
+
 
 def get_standings(season):
     connection = http.HTTPSConnection("v1.basketball.api-sports.io")
 
     headers = {
     'x-rapidapi-host': "v1.basketball.api-sports.io",
-    'x-rapidapi-key': os.getenv("API_SPORTS_KEY")
+    'x-rapidapi-key': os.getenv(key)
     }
 
     connection.request("GET", f"/standings?league=12&season={season}", headers=headers)
