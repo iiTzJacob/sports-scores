@@ -3,10 +3,10 @@ import http.client as http
 import json
 import pandas as pd
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 # Load variables from .env file
-load_dotenv()
+#load_dotenv()
 
 def get_standings(season):
     connection = http.HTTPSConnection("v1.basketball.api-sports.io")
