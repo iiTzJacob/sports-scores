@@ -2,13 +2,18 @@ import streamlit as st
 import http.client as http
 import json
 import pandas as pd
+import os
+from dotenv import load_dotenv
+
+# Load variables from .env file
+load_dotenv()
 
 def get_standings(season):
     connection = http.HTTPSConnection("v1.basketball.api-sports.io")
 
     headers = {
     'x-rapidapi-host': "v1.basketball.api-sports.io",
-    'x-rapidapi-key': "64c004a78ca539de6c7cde0858ec2010"
+    'x-rapidapi-key': os.getenv("API_SPORTS_KEY")
     }
 
     connection.request("GET", f"/standings?league=12&season={season}", headers=headers)
