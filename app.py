@@ -51,7 +51,7 @@ def sort_standings_data(seasons):
 
 
 with st.container():
-    st.header("NBA Scores")
+    st.header("NBA Standings")
 
     option = st.selectbox(
         "What NBA season do you want to see standings for?",
